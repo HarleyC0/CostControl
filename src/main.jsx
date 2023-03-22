@@ -20,6 +20,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 
 // Componentes
-// boton de añadir, añade ingresos y egresos
+// buscador de elementos en la lista
+// espacio de resumen, dinero total, dinero que se gastará y dinero que quedará
+// contador de gastos realizados, counter
 // espacio con lista de gastos o ingresos
-// espacio que muestre el dinero que tengo en total y pequeño el total de gastos que me faltan (numero)
+// boton de añadir, añade ingresos y egresos
+

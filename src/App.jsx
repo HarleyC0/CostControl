@@ -6,6 +6,7 @@ import { Resume } from './Resume';
 import { Search } from './Search';
 import { List } from './List';
 import { Create } from './Create';
+import { Item } from './Item';
 
 
 function App() {
@@ -14,13 +15,15 @@ function App() {
   return (
     <div className="App">
 
+      <Search/>
+
       <Resume/>
 
       <Counter/>
 
-      <Search/>
-
-      <List/>
+      <List>
+        <Item/>
+      </List>
 
       <Create/>
 
