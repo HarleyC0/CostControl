@@ -1,8 +1,19 @@
 import React from "react";
+import { CostContext } from "../CostContext";
 
-function Create () {
+function Create (props) {
+
+    const onClickButton = () => {
+        props.setOpenModal(prevState => !prevState);
+    };
+
+
     return (
-        <input placeholder="Search..." className="inputSearch"/>
+        <button
+            onClick={onClickButton}
+        >
+            New Value
+        </button>
     );
 }
 

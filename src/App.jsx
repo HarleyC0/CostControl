@@ -1,5 +1,5 @@
+import React from 'react';
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
 import { Counter } from './Counter';
 import { Resume } from './Resume';
@@ -7,27 +7,47 @@ import { Search } from './Search';
 import { List } from './List';
 import { Create } from './Create';
 import { Item } from './Item';
+import { Modal } from './Modal';
+import { Form } from './Form';
+import { CostContext, CostProvider } from './CostContext';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const {
+    openModal,
+    setOpenModal,
+  } = React.useContext(CostContext);
+
+  //const openModal = React.useContext(CostContext);
 
   return (
-    <div className="App">
 
-      <Search/>
+    <CostProvider>
 
-      <Resume/>
+      <div className="App">
 
-      <Counter/>
+        <Search/>
 
-      <List>
-        <Item/>
-      </List>
+        <Resume/>
 
-      <Create/>
+        <Counter/>
 
-    </div>
+        <List>
+          <Item/>
+        </List>
+
+        <Create/>
+
+        {!!openModal && (
+          <Modal>
+            <Form />
+          </Modal>
+        )}
+
+      </div>
+
+    </CostProvider>
   )
 }
 
